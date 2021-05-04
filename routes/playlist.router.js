@@ -84,7 +84,6 @@ router.route("/delete/:userId/:playListId").delete(async (req, res) => {
 
   const update = await userToUpdate.playLists.pull({ _id: playListId });
   await userToUpdate.save();
-  console.log({ userToUpdate });
 
   res.json({ success: true, message: "delete hit " });
 });
