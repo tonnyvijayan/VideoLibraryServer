@@ -54,11 +54,11 @@ const userSchema = new Schema({
 });
 
 userSchema.index(
-  { likedVideos: 1 },
+  { "likedVideos._id": 1 },
   {
     unique: true,
     partialFilterExpression: {
-      likedVideos: { $exists: true, $gt: [] },
+      "likedVideos._id": { $exists: true, $gt: {} },
     },
   }
 );
