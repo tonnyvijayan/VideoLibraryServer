@@ -78,15 +78,6 @@ router
       console.log({ user });
       await user.save();
 
-      // const updatedUserData = {
-      //   likedVideos: [...user.likedVideos, ...userUpdate.likedVideos],
-      // };
-      // console.log(updatedUserData);
-
-      // const finalUserUpdate = extend(user, updatedUserData);
-      // console.log({ finalUserUpdate });
-      // const updatedResponse = await finalUserUpdate.save();
-
       res.json({ success: true, message: "Video Added to Watch Later" });
     } catch (error) {
       res.json({
